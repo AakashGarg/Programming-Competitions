@@ -8,10 +8,7 @@ import java.io.InputStreamReader;
  */
 public class BloomFilter {
     //static HashSet<String> inputSet = new HashSet<String>();
-    static boolean[] filter = {false, false,false,false,false,false,false,
-                                false,false,false,false,false,false,false,
-                                false,false,false,false,false,false,false,
-                                false,false,false,false,false};
+    static boolean[] filter = new boolean[26];
     static String[] iString;
          
     /**
@@ -45,7 +42,7 @@ public class BloomFilter {
         try {
             iString = br.readLine().toUpperCase().split(" ");
         } catch (IOException ex) {
-//exception caught;
+			//exception caught;
         }
         int wordCount=0;
         for (int i = 0; i < iString.length; i++) 
